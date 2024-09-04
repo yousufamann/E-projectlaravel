@@ -40,12 +40,21 @@ Route::resource('product', productcontroller::class);
 
 // addproduct controller //
 Route::get('addproduct',[admincontroller::class,'addproduct']);
-Route::get('update/{id}',[productcontroller::class,'update']);
-Route::post('update',[productcontroller::class,'update'])->name('Update');
 // addproduct controller end //
 
-// addtesting controller//
+ //productcontroller edit or update work//
+ Route::get('edit/{id}',[productcontroller::class,'edit']);
+ Route::post('update_data/{id}',[productcontroller::class,'update_data']);
+ //productcontroller edit or update work//
+
+// addtesting testingcontroller//
 Route::get('addtestingtypes',[admincontroller::class,'addtesting']);
-Route::get('testing',[testingtypescontroller::class,'testing']);
-Route::post('testing',[testingtypescontroller::class,'testingstore']);
-Route::get('testingdestory',[testingtypescontroller::class,'destory'])->name('testing.destroy');
+Route::post('testing.store',[testingtypescontroller::class,'testingstore'])->name('testing.store');
+Route::get('testing',[testingtypescontroller::class, 'index']);
+// endtesting testingcontroller//
+
+//  testingcontroller edit or update work //
+Route::get('testingedit/{id}', [TestingTypesController::class, 'testingedit']);
+Route::post('testingupdate/{id}',[TestingTypesController::class, 'testingupdate']);
+Route::get('testingdestory/{id}',[testingtypescontroller::class,'testingdestory']);
+// testingcontroller edit or update work //

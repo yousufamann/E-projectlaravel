@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 02, 2024 at 07:53 PM
+-- Generation Time: Sep 04, 2024 at 08:40 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -38,8 +38,8 @@ CREATE TABLE `cache` (
 --
 
 INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
-('c525a5357e97fef8d3db25841c86da1a', 'i:1;', 1725291003),
-('c525a5357e97fef8d3db25841c86da1a:timer', 'i:1725291003;', 1725291003);
+('c525a5357e97fef8d3db25841c86da1a', 'i:1;', 1725457792),
+('c525a5357e97fef8d3db25841c86da1a:timer', 'i:1725457792;', 1725457792);
 
 -- --------------------------------------------------------
 
@@ -182,7 +182,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `TrackingId`, `ProductName`, `ProductDescription`, `ProductImage`, `created_at`, `updated_at`) VALUES
-(6, '013121159848', 'product', 'electronic', '1725290451_image.jpeg.png', '2024-09-02 22:20:51', '2024-09-02 22:20:51');
+(16, '019592583443', 'product', 'electronic', '1725460099_Fire Alarm System 1.jpg', '2024-09-04 21:28:19', '2024-09-04 21:28:19');
 
 -- --------------------------------------------------------
 
@@ -204,7 +204,8 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('mGZeCnC5ReW2fNUtgbIdmBxWoZ5cWY5iUG9IdXft', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiSWpNYVRhdkNmWDh4ZTNCa1hCRG9mdmhrUmg0ZVJOZFJhdkkyOXY0VyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTIkbm9JWWp0NklMWjhSY0wydXFmTXNjLi96WXU5Q3E5SGw5TWIyZVhMcGIxbXZTcmZMelQ5NlciO30=', 1725295265);
+('7XWXXC7j4ueQ1MgbmM9loRahFegeRWH1RByM94tn', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiMzVnMEdISmNzN3FKUmg4clowc1doaTM0R0wwaHI4Q3NOMjFUY0diVyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjIxOiJwYXNzd29yZF9oYXNoX3NhbmN0dW0iO3M6NjA6IiQyeSQxMiRub0lZanQ2SUxaOFJjTDJ1cWZNc2MuL3pZdTlDcTlIbDlNYjJlWExwYjFtdlNyZkx6VDk2VyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fX0=', 1725456979),
+('leGdxNrDQ0KnaEWpov9WJsIvMhDrb4QOF3DXZZdn', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiNVh3WWtDRW9rUE53S0lTMVU0R1lSQzdyUkt2U09MNFZ3QkNJSFhrOCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjk6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC90ZXN0aW5nIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjIxOiJwYXNzd29yZF9oYXNoX3NhbmN0dW0iO3M6NjA6IiQyeSQxMiRub0lZanQ2SUxaOFJjTDJ1cWZNc2MuL3pZdTlDcTlIbDlNYjJlWExwYjFtdlNyZkx6VDk2VyI7fQ==', 1725460170);
 
 -- --------------------------------------------------------
 
@@ -243,8 +244,7 @@ CREATE TABLE `testingtypes` (
 --
 
 INSERT INTO `testingtypes` (`id`, `TestingTypes`, `TestingTypesImage`, `TestingDescription`, `created_at`, `updated_at`) VALUES
-(1, 'test', '1725281259_image.jpeg.png', 'chemical', '2024-09-02 19:47:39', '2024-09-02 19:47:39'),
-(2, 'test', '1725286627_image.jpg.png', 'nnn', '2024-09-02 21:17:07', '2024-09-02 21:17:07');
+(15, 'test', '1725460167_Enviromental Chamber 1.jpg', 'chemical', '2024-09-04 21:29:27', '2024-09-04 21:29:27');
 
 -- --------------------------------------------------------
 
@@ -403,7 +403,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `testingdetails`
@@ -415,7 +415,7 @@ ALTER TABLE `testingdetails`
 -- AUTO_INCREMENT for table `testingtypes`
 --
 ALTER TABLE `testingtypes`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `users`

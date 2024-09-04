@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use function Laravel\Prompts\alert;
 
 class productcontroller extends Controller
 {
@@ -14,8 +13,8 @@ class productcontroller extends Controller
      */
     public function index()
     {
-        $product = Product::all();
-        return view('admin.products', compact('product'));
+        $addproduct = Product::all();
+        return view('admin.products', compact('addproduct'));
     }
     /**
      * Show the form for creating a new resource.
@@ -53,22 +52,22 @@ class productcontroller extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
-    {
-        //
+    public function edit($id)
+    {   $data =Product::find($id);
+        return view('customupdate.index',compact('data'));
+
     }
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
-    {
-        $addproduct = Product::find($id);
-        $addproduct->ProductName = $request->productname;
-        echo 'Fareed';
-        die;
-        $addproduct->save();
-        return redirect()->back();
-    }
+    public function update_data( Request $request ,$id){
+        $data =Product::find($id);
+        $data->ProductName = $request->ProductName;
+        $data->ProductDescription = $request->ProductDescription;
+        $data->save();
+     return redirect('product');
+
+}
     /**
      * Remove the specified resource from storage.
      */
@@ -77,4 +76,5 @@ class productcontroller extends Controller
         DB::select('DELETE FROM `products` WHERE id = "'.$id.'"');
         return redirect()->back();
     }
+
 }

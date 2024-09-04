@@ -4,7 +4,7 @@
     <center>
       <h1 class="mt-5" style="font-size: 40px; font-weight:bolder; font-family:sans-serif">Add Testing</h1>
   </center>
-  <form action="/testing" method="POST" enctype="multipart/form-data">
+  <form action="{{ route('testing.store')}}" method="POST" enctype="multipart/form-data">
     @csrf
       <div class="row">
           <div class="col-lg-6 col-md-12 col-sm-12 mt-5">

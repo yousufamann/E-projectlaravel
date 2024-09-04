@@ -7,7 +7,7 @@ use App\Models\testingtypes;
 use Illuminate\Support\Facades\DB;
 class testingtypescontroller extends Controller
 {
-    public function testing(){
+    public function index(){
         $testing = testingtypes::all();
         return view('admin.testingtypes', compact('testing'));
     }
@@ -25,9 +25,23 @@ class testingtypescontroller extends Controller
         return redirect()->back();
     }
 
-    public function destory(string $id){
-        //    print_r($id);
-        DB::select('DELETE FROM `testingtypes` WHERE id="'.$id.'"');
-        return redirect()->back();
+    public function testingdestory(string $id){
+    DB::select("DELETE FROM `testingtypes` WHERE id = '".$id."'");
+    return redirect()->back();
+    }
+
+    public function testingedit($id){
+        $datatesting= testingtypes::find($id);
+        return view('customupdate.edittesting', compact('datatesting'));
+    }
+
+    public function testingupdate(Request $request ,$id){
+      $datatesting= testingtypes::find($id);
+    //   echo $datatesting;die;
+      $datatesting->TestingTypes=$request->TestingTypes;
+      $datatesting->TestingDescription=$request->TestingDescription;
+      $datatesting->save();
+    //   echo'yousuf';die;
+    return redirect('testingtypes');
     }
 }

@@ -9,7 +9,7 @@
             <br>
             <br>
             <div class="row">
-                <div class="col-12">
+                <div class="col-lg-6">
                     <table class="table table-hover text-center" style="color: rgba(14, 14, 148, 0.945)">
                         <thead>
                             <tr>
@@ -28,14 +28,8 @@
                                <td>{{$item->TestingTypes}}</td>
                                <td><img src="TestingTypesImage/{{$item->TestingTypesImage}}" alt=""></td>
                                <td>{{$item->TestingDescription}}</td>
-                               <td><button class="btn btn-primary">Updated</button></td>
-                                <td><form action="{{ route('product.destroy', $item->id) }}" method="post">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button class="btn btn-danger">Deleted</button>
-                                </form>
-
-                               </td>
+                               <td><a href="{{url('testingedit',$item->id)}}"><button class="btn btn-primary">update</button></a></td>
+               <td><a href="{{url('testingdestory', $item->id)}}"><button class="btn btn-danger">Delete</button></a></td>
                             </tr>
                         @endforeach
                         </tbody>
